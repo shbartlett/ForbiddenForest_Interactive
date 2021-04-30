@@ -1,0 +1,499 @@
+<!DOCTYPE html>
+<html class="no-js" lang="en">
+
+<head>
+
+    <!-- ****************************************************************************************** -->
+    <!-- Boilerplate HTML -->
+    <!-- ****************************************************************************************** -->
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title>Welcome to the Forbidden Forest</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <link rel="manifest" href="site.webmanifest">
+    <link rel="apple-touch-icon" href="icon.png">
+    <!-- Place favicon.ico in the root directory -->
+
+    <!-- ****************************************************************************************** -->
+    <!-- Links to Stylesheets -->
+    <!-- ****************************************************************************************** -->
+
+    <!-- BOILERPLATE CSS -->
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/main.css">
+
+    <!-- CUSTOM CSS -->
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/styles.css" >
+
+
+
+    <!-- Include CARTO.css -->
+    <link href="https://carto.com/developers/carto-js/examples/maps/public/style.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cartodb-libs.global.ssl.fastly.net/cartodb.js/v3/3.15/themes/css/cartodb.css" />
+   <link href="https://carto.com/developers/carto-js/examples/maps/public/style.css" rel="stylesheet">
+
+    <!-- animatedModal css -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.2.0/animate.min.css" rel="stylesheet" />
+    <link rel="css/stylesheet" href="animate.min.css" />
+    <link rel="css/stylesheet" href="normalize.min.css" />
+
+    <!-- LEAFLET CSS -->
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet.draw/0.2.3/leaflet.draw.css">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.3.4/dist/leaflet.css" />
+
+
+
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
+
+    <!-- LEAFLET SIDEBAR CSS -->
+    <link rel="stylesheet" href="lib/leaflet-sidebar-v2/css/leaflet-sidebar.css" />
+
+    <!-- JQUERY CSS -->
+    <link rel="stylesheet" href="//code.jquery.com/ui/1.11.4/themes/smoothness/jquery-ui.css">
+
+    <!-- AIRSHIP -->
+    <link rel="stylesheet" href="https://libs.cartocdn.com/airship-style/v2.4.1/airship.css">
+    <link rel="stylesheet" href="https://libs.cartocdn.com/airship-icons/v2.4.1/icons.css">
+
+    <!-- MAPBOX GL -->
+    <link href='https://api.tiles.mapbox.com/mapbox-gl-js/v1.10.0/mapbox-gl.css' rel='stylesheet' />
+
+    <!-- FONT AWESOME ICONS -->
+    <link href="http://maxcdn.bootstrapcdn.com/font-awesome/5.15.3/css/font-awesome.min.css" rel="stylesheet">
+    <link href="http://maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
+
+
+    <!-- GOOGLE FONTS -->
+    <link href="https://fonts.googleapis.com/css?family=Myriad" rel="stylesheet">
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,400italic,500,600,700' rel='stylesheet' type='text/css'>
+
+    <!-- ****************************************************************************************** -->
+    <!-- JavaScript Libraries -->
+    <!-- ****************************************************************************************** -->
+    <!-- CARTO -->
+    <script src="https://libs.cartocdn.com/carto.js/v4.2.0/carto.min.js"></script>
+    <script src="https://cartodb-libs.global.ssl.fastly.net/carto.js/v4.0.0-beta.4/carto.min.js"></script>
+    <script src="https://unpkg.com/leaflet@1.3.4/dist/leaflet.js"></script>
+
+    <!-- MapBox-->
+    <script src='https://api.mapbox.com/mapbox.js/v3.3.1/mapbox.js'></script>
+
+    <!-- LEAFLET -->
+    <script src="https://unpkg.com/leaflet@1.3.4/dist/leaflet.js"></script>
+    <!-- Include Leaflet -->
+    <script src="https://unpkg.com/leaflet@1.5.1/dist/leaflet.js"></script>
+    <script src="js/vendor/leaflet.js"></script>
+
+
+     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/leaflet.draw/0.2.3/leaflet.draw.js"></script>
+
+    <!-- LEAFLET SIDEBAR -->
+    <script src="lib/leaflet-sidebar-v2/js/leaflet-sidebar.js"></script>
+
+    <!-- ESRI LEAFLET -->
+    <script src="https://unpkg.com/esri-leaflet@2.2.3/dist/esri-leaflet.js" integrity="sha512-YZ6b5bXRVwipfqul5krehD9qlbJzc6KOGXYsDjU9HHXW2gK57xmWl2gU6nAegiErAqFXhygKIsWPKbjLPXVb2g==" crossorigin=""></script>
+
+    <!-- LEAFLET IMAGE -->
+    <script src='//api.tiles.mapbox.com/mapbox.js/plugins/leaflet-image/v0.0.4/leaflet-image.js'></script>
+
+
+    <!-- AIRSHIP -->
+    <link rel="stylesheet" href="https://libs.cartocdn.com/airship-style/v2.4.1/airship.css">
+    <script type="module" src="https://libs.cartocdn.com/airship-components/v2.4.1/airship/airship.esm.js"></script>
+    <script nomodule="" src="https://libs.cartocdn.com/airship-components/v2.4.1/airship/airship.js"></script>
+    <script type="module" src="https://libs.cartocdn.com/airship-components/v2.4.1/airship/airship.esm.js"></script>
+    <script nomodule="" src="https://libs.cartocdn.com/airship-components/v2.4.1/airship/airship.js"></script>
+    <!-- Airship -->
+    <script src="https://libs.cartocdn.com/airship-components/v1.0.3/airship.js"></script>
+
+    <!-- LEAFLET PRINTING -->
+    <script src="lib/leaflet-easyPrint/dist/bundle.js"></script>
+    <script src="lib/leaflet-easyPrint/dist/bundle.js.map"></script>
+    <script src='//api.tiles.mapbox.com/mapbox.js/plugins/leaflet-image/v0.0.4/leaflet-image.js'></script>
+
+    <link rel="stylesheet" href="//code.jquery.com/ui/1.11.4/themes/smoothness/jquery-ui.css"> <!-- jQuery UI CSS -->
+    <!-- JQUERY -->
+    <script type="text/javascript" src="http://code.jquery.com/ui/1.12.0/jquery-ui.min.js"></script>
+
+    <!-- Leaflet Pulsing Icon -->
+    <script src="lib/L.Icon.Pulse.js"></script>
+
+    <!-- Include Chart.js -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.1/Chart.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+
+    <!-- LINK TO MAIN JAVASCRIPT-->
+    <script src="js/main.js"></script>
+    <script src="js/plugins.js"></script>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script> <!-- jQuery v1.11.2 JS -->
+    <script src="//code.jquery.com/ui/1.11.4/jquery-ui.js"></script> <!-- jQueryUI v1.11.4 JS -->
+    <script language="JavaScript" type="text/javascript" src="/js/jquery.min.js"></script>
+    <script language="JavaScript" type="text/javascript" src="/js/animatedModal.min.js"></script>
+    <script language="JavaScript" type="text/javascript" src="/js/animatedModal.js"></script>
+
+    <script src="//code.jquery.com/ui/1.11.4/jquery-ui.js"></script> <!-- jQueryUI v1.11.4 JS -->
+    <script src="js/leaflet.draw.js"></script>
+
+</head>
+
+<body>
+
+
+<script src='https://api.mapbox.com/mapbox.js/plugins/leaflet-minimap/v1.0.0/Control.MiniMap.js'></script>
+<link href='https://api.mapbox.com/mapbox.js/plugins/leaflet-minimap/v1.0.0/Control.MiniMap.css' rel='stylesheet' />
+
+<!--jQuery-->
+<script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+<!-- JQUERY -->
+
+<script type="text/javascript" src="http://code.jquery.com/ui/1.12.0/jquery-ui.min.js"></script>
+
+<!-- Remember to include jQuery :) -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.0.0/jquery.min.js"></script>
+
+<!-- jQuery Modal -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jquery-modal/0.9.1/jquery.modal.min.css" />
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-modal/0.9.1/jquery.modal.min.js"></script>
+
+
+<script src="/js/animatedModal.js"></script>
+
+
+<script type="text/javascript">
+// <![CDATA[
+var colour="turquoise";
+var sparkles=120;
+
+/****************************
+*  Tinkerbell Magic Sparkle *
+* (c) 2005 mf2fm web-design *
+*  http://www.mf2fm.com/rv  *
+* DON'T EDIT BELOW THIS BOX *
+****************************/
+var x=ox=400;
+var y=oy=300;
+var swide=800;
+var shigh=600;
+var sleft=sdown=0;
+var tiny=new Array();
+var star=new Array();
+var starv=new Array();
+var starx=new Array();
+var stary=new Array();
+var tinyx=new Array();
+var tinyy=new Array();
+var tinyv=new Array();
+
+window.onload=function() { if (document.getElementById) {
+  var i, rats, rlef, rdow;
+  for (var i=0; i<sparkles; i++) {
+    var rats=createDiv(3, 3);
+    rats.style.visibility="hidden";
+    document.body.appendChild(tiny[i]=rats);
+    starv[i]=0;
+    tinyv[i]=0;
+    var rats=createDiv(5, 5);
+    rats.style.backgroundColor="transparent";
+    rats.style.visibility="hidden";
+    var rlef=createDiv(1, 5);
+    var rdow=createDiv(5, 1);
+    rats.appendChild(rlef);
+    rats.appendChild(rdow);
+    rlef.style.top="2px";
+    rlef.style.left="0px";
+    rdow.style.top="0px";
+    rdow.style.left="2px";
+    document.body.appendChild(star[i]=rats);
+  }
+  set_width();
+  sparkle();
+}}
+
+function sparkle() {
+  var c;
+  if (x!=ox || y!=oy) {
+    ox=x;
+    oy=y;
+    for (c=0; c<sparkles; c++) if (!starv[c]) {
+      star[c].style.left=(starx[c]=x)+"px";
+      star[c].style.top=(stary[c]=y)+"px";
+      star[c].style.clip="rect(0px, 5px, 5px, 0px)";
+      star[c].style.visibility="visible";
+      starv[c]=50;
+      break;
+    }
+  }
+  for (c=0; c<sparkles; c++) {
+    if (starv[c]) update_star(c);
+    if (tinyv[c]) update_tiny(c);
+  }
+  setTimeout("sparkle()", 40);
+}
+
+function update_star(i) {
+  if (--starv[i]==25) star[i].style.clip="rect(1px, 4px, 4px, 1px)";
+  if (starv[i]) {
+    stary[i]+=1+Math.random()*3;
+    if (stary[i]<shigh+sdown) {
+      star[i].style.top=stary[i]+"px";
+      starx[i]+=(i%5-2)/5;
+      star[i].style.left=starx[i]+"px";
+    }
+    else {
+      star[i].style.visibility="hidden";
+      starv[i]=0;
+      return;
+    }
+  }
+  else {
+    tinyv[i]=50;
+    tiny[i].style.top=(tinyy[i]=stary[i])+"px";
+    tiny[i].style.left=(tinyx[i]=starx[i])+"px";
+    tiny[i].style.width="2px";
+    tiny[i].style.height="2px";
+    star[i].style.visibility="hidden";
+    tiny[i].style.visibility="visible"
+  }
+}
+
+function update_tiny(i) {
+  if (--tinyv[i]==25) {
+    tiny[i].style.width="1px";
+    tiny[i].style.height="1px";
+  }
+  if (tinyv[i]) {
+    tinyy[i]+=1+Math.random()*3;
+    if (tinyy[i]<shigh+sdown) {
+      tiny[i].style.top=tinyy[i]+"px";
+      tinyx[i]+=(i%5-2)/5;
+      tiny[i].style.left=tinyx[i]+"px";
+    }
+    else {
+      tiny[i].style.visibility="hidden";
+      tinyv[i]=0;
+      return;
+    }
+  }
+  else tiny[i].style.visibility="hidden";
+}
+
+document.onmouseover=mouse;
+function mouse(e) {
+  set_scroll();
+  y=(e)?e.pageY:event.y+sdown;
+  x=(e)?e.pageX:event.x+sleft;
+}
+
+function set_scroll() {
+  if (typeof(self.pageYOffset)=="number") {
+    sdown=self.pageYOffset;
+    sleft=self.pageXOffset;
+  }
+  else if (document.body.scrollTop || document.body.scrollLeft) {
+    sdown=document.body.scrollTop;
+    sleft=document.body.scrollLeft;
+  }
+  else if (document.documentElement && (document.documentElement.scrollTop || document.documentElement.scrollLeft)) {
+    sleft=document.documentElement.scrollLeft;
+	sdown=document.documentElement.scrollTop;
+  }
+  else {
+    sdown=0;
+    sleft=0;
+  }
+}
+
+window.onresize=set_width;
+function set_width() {
+  if (typeof(self.innerWidth)=="number") {
+    swide=self.innerWidth;
+    shigh=self.innerHeight;
+  }
+  else if (document.documentElement && document.documentElement.clientWidth) {
+    swide=document.documentElement.clientWidth;
+    shigh=document.documentElement.clientHeight;
+  }
+  else if (document.body.clientWidth) {
+    swide=document.body.clientWidth;
+    shigh=document.body.clientHeight;
+  }
+}
+
+function createDiv(height, width) {
+  var div=document.createElement("div");
+  div.style.position="absolute";
+  div.style.height=height+"px";
+  div.style.width=width+"px";
+  div.style.overflow="hidden";
+  div.style.backgroundColor=colour;
+  return (div);
+}
+// ]]>
+</script>
+
+<style>
+.widgets {
+  padding: 10px;
+  height: 100%!important;
+}
+</style>
+
+<style type="text/css">body, a:hover {cursor: url(http://cur.cursors-4u.net/user/use-1/use160.cur), progress !important;}
+</style><a href="http://www.cursors-4u.com/" target="_blank" title="Harry Potter Magical Wand">
+<img src="http://cur.cursors-4u.net/cursor.png" border="0" alt="Harry Potter Magical Wand" style="position:absolute; top: 0px; right: 0px;" /></a>
+
+    <!-- MAP -->
+
+<div id="myMenu">
+          <div class="myWrapper">
+            <nav>
+            <img src="images/MoM_1.svg" height="48" />
+            <img src="images/MPS5.svg" height="52" />
+            </nav>
+          </div>
+        </div>
+
+
+        <body class="as-app-body">
+          <div class="as-app">
+            <div class="as-content">
+              <main class="as-main">
+                <div class="as-map-area">
+                  <div id="map"></div>
+                </div>
+            </main>
+
+
+
+              <div class="as-map-panels" data-name="Legends">
+                <div class="as-panel as-panel--top as-panel--right">
+                  <div class="box-div">
+                              <div class="legendWrapper">
+
+                  <as-category-widget
+                  heading="Magical Creatures by Rating"
+                  description="CAUTION! Be aware of Ministry of Magic (MoM)
+                  classification levels, as some creatures may be dangerous.
+                  See side panel for additional information."
+                  >
+                  </as-category-widget>
+
+                  <as-formula-widget
+                  heading="Total Magical Creatures"
+                  description="All magical creatures within current view extent."
+                  >
+                  </as-formula-widget>
+
+        <div id="wrapper-dropdown-selector">
+    <select id="selectDrop">
+            <option selected value="">Zoom to a creature!</option>
+    </select>
+    </div>
+</section>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+        <!-- SIDEBAR -->
+        <div id="sidebar" class="leaflet-sidebar collapsed">
+            <!-- Nav tabs -->
+            <div class="leaflet-sidebar-tabs">
+                <ul role="leaflet-tablist">
+                  <li><a href="#home" role="tab"><i class="fa fa-bars"></i></a></li>
+                  <li><a href="#info" role="tab"><i class="fa fa-info"></i></a></li>
+                  <li><a href="#magic" role="tab"><i class="fa fa-question"></i></a></li>
+                  <li><a href="#covid" role="tab"><i class="fa fa-plus-square"></i></a></li>
+                  <li><a href="./" role="tab"><i class="fa fa-repeat"></i></a></li>
+
+                </ul>
+            </div>
+
+            <!-- PANES -->
+            <div class="leaflet-sidebar-content">
+              <div class="leaflet-sidebar-pane" id="covid">
+                  <h1 class="leaflet-sidebar-header">
+                        COVID-19 UPDATES
+                      <img src='images\covid.png'width=400,img style="float: left; padding-right: 50px;  display: block;">
+                      <br>
+                      <br>
+                      <span class="leaflet-sidebar-close"><i class="fa fa-caret-left"></i></span>
+                          <h2><b><i>STATUS: 17 April, 2021</i></b></h2>
+                                  <h2>The park is currently open for visitors.</h2>
+                          <h2><b><i>Hogsmeade</i></b></h2>
+                                  <h2>Masks are required at all shops and restaurants in downtown Hogsmeade. Cafes and restauarants
+                                  operating at limited capacity.</h2>
+                          <h2><b><i>Hogwarts</i></b></h2>
+                                  <h2>Students at Hogwarts are currently employing distance-learning (via floo network).
+                                    Visitors are currently permitted by APPOINTMENT ONLY. Please contact Headmistress M. McGonagal.</h2>
+
+  </div>
+
+                        <div class="leaflet-sidebar-pane" id="home">
+                          <h1 class="leaflet-sidebar-header">
+                                Welcome to the Forbidden Forest!
+                              <img src='images\MPS1.svg'width=200,img style="float: left; padding-right: 50px;  display: block;">
+                              <br>
+                              <br>
+                              <span class="leaflet-sidebar-close"><i class="fa fa-caret-left"></i></span>
+                                  <h2><b><i>Proceed with Caution</i></b></h2>
+
+                                          <h2>Please treat the forest and its denizens with respect, as this is their home. Do use common sense and don't get yourself injured, or worse--expelled.</h2>
+                                  <h2><b><i>COVID Update</i></b></h2>
+                                          <h2>The park is currently open for visitors. Please maintain a safe distance (6 feet) from other visitors, and maintain proper hygiene.</h2>
+                                          <h2>Please see the COVID-19 info panel for additional updates.</h2>
+
+            </div>
+
+            <div class="leaflet-sidebar-pane" id="magic">
+              <h1 class="leaflet-sidebar-header">
+                    Guide to the Forest
+                  <img src='images\Legend.svg'width=250,img style="float: left; padding-right: 50px;  display: block;">
+</div>
+
+            <div class="leaflet-sidebar-pane" id="info">
+                <h1 class="leaflet-sidebar-header">
+                    Magical Creatures
+                    <span class="leaflet-sidebar-close"><i class="fa fa-caret-left"></i></span>
+                    <h2><b><i>About Ministry of Magic Classification Levels</i></b></h2>
+                                <h2>A classification is given by the Department for the Regulation and Control of Magical Creatures to all known Beasts, Beings and Spirits.
+                                  These offers an at-a-glance guide to the perceived danger level of a creature.</h2>
+
+                    <h2><b><i>Classification Levels</i></b></h2>
+                                <h2>XXXXX - Known wizard killer / impossible to train or domesticate</h2>
+                                <h2>XXXX - Dangerous / requires specialist knowledge / skilled wizard may handle</h2>
+                                <h2>XXX - Competent wizard should cope</h2>
+                                <h2>XX - Harmless / may be domesticated</h2>
+                                <h2>X - Boring</h2>
+                                <h2>For further reading on distance decay and impacts on spatial modeling, see the Ministry of Magic's Magical Creatures
+                                  <a href="https://onlinelibrary.wiley.com/doi/pdf/10.1002/9781118786352.wbieg0179"> <i>website.</i></a></h2>
+
+            </div>
+        </div>
+        </div>
+
+
+    <div id="fade" class="modal">
+      <h3 class="as-title-alert">ATTENTION! COVID-19 ALERT</h3>
+      <p class="as-body-alert">Please maintain a safe distance from other visitors.
+        See COVID-19 information tab for guidelines and updates.</p>
+    </div>
+
+    <script>$("#fade").modal({
+    fadeDuration: 1000,
+    fadeDelay: .5,
+    closeClass: 'icon-remove'
+    });</script>
+
+
+
+</body>
+
+</html>

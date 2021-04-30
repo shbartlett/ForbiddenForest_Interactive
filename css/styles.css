@@ -1,0 +1,124 @@
+.mapbox-ctrl-minimap {
+  border: solid rgba(255, 255, 255, 1) 4px;
+  box-shadow: 0 1px 5px rgba(0, 0, 0, 0.65);
+  border-radius: 3px;
+  background: #f8f8f9;
+  transition: all 0.6s;
+}
+
+.mapbox-ctrl-minimap a.minimap {
+  background-color: rgba(255, 255, 255, 1);
+  background-repeat: no-repeat;
+  z-index: 99999;
+  transition: all 0.6s;
+}
+
+.mapbox-ctrl-minimap a.minimap.minimized-bottomright {
+  -webkit-transform: rotate(0deg);
+  transform: rotate(0deg);
+  border-radius: 0px;
+}
+
+.mapbox-ctrl-minimap a.minimap.minimized-topleft {
+  -webkit-transform: rotate(180deg);
+  transform: rotate(180deg);
+  border-radius: 0px;
+}
+
+.mapbox-ctrl-minimap a.minimap.minimized-bottomleft {
+  -webkit-transform: rotate(90deg);
+  transform: rotate(90deg);
+  border-radius: 0px;
+}
+
+.mapbox-ctrl-minimap a.minimap.minimized-topright {
+  -webkit-transform: rotate(270deg);
+  transform: rotate(270deg);
+  border-radius: 0px;
+}
+
+.mapbox-ctrl-minimap-toggle-display {
+  background-image: url('img/toggle.svg');
+  background-size: cover;
+  position: absolute;
+  border-radius: 3px 0px 0px 0px;
+}
+
+.mapbox-ctrl-minimap-toggle-display-bottomright {
+  bottom: 0;
+  right: 0;
+  -webkit-transform: rotate(180deg);
+  transform: rotate(180deg);
+}
+
+.mapbox-ctrl-minimap-toggle-display-topleft {
+  top: 0;
+  left: 0;
+  -webkit-transform: rotate(0deg);
+  transform: rotate(0deg);
+}
+
+.mapbox-ctrl-minimap-toggle-display-bottomleft {
+  bottom: 0;
+  left: 0;
+  -webkit-transform: rotate(270deg);
+  transform: rotate(270deg);
+}
+
+.mapbox-ctrl-minimap-toggle-display-topright {
+  top: 0;
+  right: 0;
+  -webkit-transform: rotate(90deg);
+  transform: rotate(90deg);
+}
+
+.mapboxgl-export-list
+{
+    display: none;
+}
+
+.mapboxgl-ctrl-group .mapboxgl-export-list button
+{
+    background: none;
+    border: none;
+    cursor: pointer;
+    display: block;
+    font-size: 14px;
+    padding: 8px 8px 6px;
+    text-align: right;
+    width: 100%;
+    height: auto;
+}
+
+.mapboxgl-export-list button.active
+{
+    font-weight: bold;
+}
+
+.mapboxgl-export-list button:hover
+{
+    background-color: rgba(0, 0, 0, 0.05);
+}
+
+.mapboxgl-export-list button + button
+{
+    border-top: 1px solid #ddd;
+}
+
+.mapboxgl-export-control
+{
+    background: url('data:image/svg+xml;charset=UTF-8,<svg id="Capa_1" enable-background="new 0 0 512 512" height="512" viewBox="0 0 512 512" width="512" xmlns="http://www.w3.org/2000/svg"><g><path d="m422.5 99v-24c0-41.355-33.645-75-75-75h-184c-41.355 0-75 33.645-75 75v24z"/><path d="m118.5 319v122 26 15c0 16.568 13.431 30 30 30h214c16.569 0 30-13.432 30-30v-15-26-122zm177 128h-80c-8.284 0-15-6.716-15-15s6.716-15 15-15h80c8.284 0 15 6.716 15 15s-6.716 15-15 15zm0-64h-80c-8.284 0-15-6.716-15-15s6.716-15 15-15h80c8.284 0 15 6.716 15 15s-6.716 15-15 15z"/><path d="m436.5 129h-361c-41.355 0-75 33.645-75 75v120c0 41.355 33.645 75 75 75h13v-80h-9c-8.284 0-15-6.716-15-15s6.716-15 15-15h24 304 24c8.284 0 15 6.716 15 15s-6.716 15-15 15h-9v80h14c41.355 0 75-33.645 75-75v-120c0-41.355-33.645-75-75-75zm-309 94h-48c-8.284 0-15-6.716-15-15s6.716-15 15-15h48c8.284 0 15 6.716 15 15s-6.716 15-15 15z"/></g></svg>');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 70%;
+}
+
+/*
+ * Hide high-res map rendering
+*/
+.hidden-map {
+    overflow: hidden;
+    height: 0;
+    width: 0;
+    position: fixed;
+}
